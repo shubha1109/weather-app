@@ -18,9 +18,11 @@ def get_weather(city_name, api_key):
         weather = data['weather'][0]['description']
         temp = data['main']['temp']
         humidity = data['main']['humidity']
+        wind_speed = data['wind']['speed']
         print(f"\nWeather in {city_name.title()}:")
         print(f"Temperature: {temp}°C")
         print(f"Humidity: {humidity}%")
+        print(f"Wind Speed: {wind_speed} m/s")
         print(f"Description: {weather.capitalize()}")
     else:
         print("City not found. Please check the name.")
